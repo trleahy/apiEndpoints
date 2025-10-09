@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8">
+    <title>CasparCG Endpoints</title>
+  </head>
+
+  <body>
+    
+    <h2>RSS Feeds</h2>
+    <details>
+      <summary><a href="rssFeeds/54nAGcIl.xml" target="_blank">Sample News Feed</a></summary>
+      <p>File Name: 54nAGcIl.xml  |  Last modified: 15-10-2024, 22:07</p>
+      <p>
+        1) Three Undecided Voters, Two Swing States, One Big Decision<br>
+        2) The Sunday Read: ‘The For-Profit City That Might Come Crashing Down’<br>
+        3) 'The Interview': Demi Moore Is Done With the Male Gaze<br>
+        4) The Story Behind ‘They’re Eating the Pets’<br>
+        5) How the Election Is Sinking a $15 Billion Business Deal<br>
+        6) Harris Baits Trump: Inside Their Fiery Debate<br>
+        7) Judge Delays Trump Sentencing Until After Election<br>
+        8) The Harris Honeymoon Is Over<br>
+        9) 'The Interview': Change Can Be Beautiful. Just Ask Will Ferrell and Harper Steele.<br>
+        10) The First Post-Affirmative Action Class Enters College<br>
+        Only the first 10 records are displayed. Please view the file to display all records.
+      </p>
+    </details>
+    <details>
+      <summary><a href="rssFeeds/fNDq8hYe.xml" target="_blank">Test Feed 01</a></summary>
+      <p>File Name: fNDq8hYe.xml  |  Last modified: 15-10-2024, 22:08</p>
+      <p>
+        1) Ticker item 1<br>
+        2) Ticker item 2<br>
+        3) Ticker item 3<br>
+        4) Ticker item 4<br>
+        5) Ticker item 5<br>
+      </p>
+    </details>
+
+    <h2>Location Timezones</h2>
+    <details>
+      <summary><a href="timezones/timezones.json" target="_blank">Timezones</a></summary>
+      <p>File Name: timezones.json  |  Last modified: 26-10-2024, 23:28</p>
+      <p>
+        1) "New York": "America/New_York",<br>
+        2) "Los Angeles": "America/Los_Angeles",<br>
+        3) "Chicago": "America/Chicago",<br>
+        4)"Denver": "America/Denver",<br>
+        5) "Toronto": "America/Toronto",<br>
+        6) "Mexico City": "America/Mexico_City",<br>
+        7) "London": "Europe/London",<br>
+        8) "Paris": "Europe/Paris",<br>
+        9) "Berlin": "Europe/Berlin",<br>
+        10) "Madrid": "Europe/Madrid",<br>
+        Only the first 10 records are displayed. Please view the file to display all records.
+        </p>
+    </details>
+
+    <h2>Assets</h2>
+    <details>
+      <summary><a href="assets/tvplus-logo.png" target="_blank">TV+ Logo</a></summary>
+      <p>File Name: tvplus-logo.png  |  Last modified: 10-11-2024, 22:36<br>Image is white with a transparent background.</p>
+      <p>
+        <img src="assets/tvplus-logo.png" alt="TV+ Logo" style="background-color:black; width:500px; align:left">
+      </p>
+    </details>
+
+    <h2>Visor Channel Playlists</h2>
+    <details>
+      <summary><a href="visorChannels/channels.json" target="_blank">Channels</a></summary>
+      <p>File Name: channels.json  |  Last modified: 05-03-2025, 16:44</p>
+    </details>
+
+  </body>
+</html>

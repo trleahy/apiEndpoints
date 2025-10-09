@@ -3,7 +3,7 @@
       "name": "Sky News",
       "description": "Comcast's UK based news channel",
       "country": "GB",
-      "url": "https://linear417-gb-hls1-prd-ak.cdn.skycdp.com/100e/Content/HLS_001_1080_30/Live/channel(skynews)/03_1080-30.m3u8"
+      "url": "https://linear417-gb-hls1-prd-ak.cdn.skycdp.com/100e/Content/HLS_001_1080_30/Live/channel(skynews)/07_1080-30.m3u8"
     },
     "SkyNewsWeather": {
       "name": "Sky News Weather",
@@ -18,7 +18,7 @@
       "url": "https://vs-hls-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/t=3840/v=pv10/b=1604032/main.m3u8"
     },
     "CNNUS" : {
-      "name": "CNN US [OFFLINE]",
+      "name": "CNN US",
       "description": "CNN US",
       "country": "US",
       "url": "https://turnerlive.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_0_3564000.m3u8"
@@ -33,19 +33,19 @@
       "name": "NBC News Now",
       "description": "NBC's 24/7 news channel",
       "country": "US",
-      "url": "https://livetv-fa.tubi.video/nbc-news-now/master_1.m3u8"
+      "url": "https://livetv-fa.tubi.video/nbc-news-now/master_5.m3u8"
     },
     "CBSNews" : {
       "name": "CBS News",
       "description": "CBS News 24/7",
       "country": "US",
-      "url": "https://cbsn-us.cbsnstream.cbsnews.com/out/v1/55a8648e8f134e82a470f83d562deeca/master_19.m3u8"
+      "url": "https://cbsn-us.cbsnstream.cbsnews.com/out/v1/55a8648e8f134e82a470f83d562deeca/master_24.m3u8"
     },
     "ABCNewsLive" : {
       "name": "ABC News Live",
       "description": "The Disney group's streaming news channel",
       "country": "US",
-      "url": "https://content.uplynk.com/channel/3324f2467c414329b3b0cc5cd987b6be.m3u8"
+      "url": "https://content-aeui1.uplynk.com/channel/3324f2467c414329b3b0cc5cd987b6be/g.m3u8?pbs=59ba86b2c58949038eca2081dcd45116"
     },
     "AlJazeeraEnglish" : {
       "name": "Al Jazeera English",

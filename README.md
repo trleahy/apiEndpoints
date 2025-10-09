@@ -1,8 +1,7 @@
-# casparcgEndpoints
+# apiEndpoints
 
-This repo serves an an API-style endpoint for my CasparCG server
+This repo serves an an API-style endpoint.
 
-## 
+## Support
 
-If you're not me and you have a question, you can contact me using the form [here](https://oblivionmedia.typeform.com/to/EwQYqmPa).
-
+For issues, questions, or contributions, please [open an issue](https://github.com/trleahy/apiEndpoints/issues) on GitHub.

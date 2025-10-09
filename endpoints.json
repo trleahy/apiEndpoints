@@ -1,0 +1,63 @@
+{
+  "groups": [
+    {
+      "id": "assets",
+      "name": "Assets",
+      "endpoints": [
+        {
+          "name": "Assets",
+          "description": "Returns specified asset.",
+          "method": "GET",
+          "path": "/api/assets/<assetName>",
+          "url": "https://trleahy.github.io/API-Endpoints/api/assets/<assetName>"
+        }
+      ]
+    },
+    {
+      "id": "rss",
+      "name": "RSS Feeds",
+      "endpoints": [
+        {
+          "name": "Sample News Feed",
+          "description": "Sample news headlines in RSS format.",
+          "method": "GET",
+          "path": "/api/rssFeeds/sampleNews.xml",
+          "url": "https://trleahy.github.io/API-Endpoints/api/rssFeeds/sampleNewsFeed.xml"
+        },
+        {
+          "name": "Test Feed",
+          "description": "Test feed in RSS format.",
+          "method": "GET",
+          "path": "/api/rssFeeds/testFeed.xml",
+          "url": "https://trleahy.github.io/API-Endpoints/api/rssFeeds/testFeed.xml"
+        }
+      ]
+    },
+    {
+      "id": "timezones",
+      "name": "Timezones",
+      "endpoints": [
+        {
+          "name": "Timezones",
+          "description": "Returns a list of timezones.",
+          "method": "GET",
+          "path": "/api/timezones/timezones.json",
+          "url": "https://trleahy.github.io/API-Endpoints/api/timezones/timezones.json"
+        }
+      ]
+    },
+    {
+      "id": "visorChannels",
+      "name": "Visor Channels",
+      "endpoints": [
+        {
+          "name": "Visor Channels",
+          "description": "Returns a list of channels for Visor.",
+          "method": "GET",
+          "path": "/api/visorChannels/visorChannels.json",
+          "url": "https://trleahy.github.io/API-Endpoints/api/visorChannels/visorChannels.json"
+        }
+      ]
+    }
+  ]
+}
