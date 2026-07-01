@@ -9,7 +9,7 @@
           "description": "Returns specified asset.",
           "method": "GET",
           "path": "/api/assets/<assetName>",
-          "url": "https://trleahy.github.io/API-Endpoints/api/assets/<assetName>"
+          "url": "https://trleahy.github.io/apiEndpoints/api/assets/<assetName>"
         }
       ]
     },
@@ -22,14 +22,14 @@
           "description": "Sample news headlines in RSS format.",
           "method": "GET",
           "path": "/api/rssFeeds/sampleNews.xml",
-          "url": "https://trleahy.github.io/API-Endpoints/api/rssFeeds/sampleNewsFeed.xml"
+          "url": "https://trleahy.github.io/apiEndpoints/api/rssFeeds/sampleNewsFeed.xml"
         },
         {
           "name": "Test Feed",
           "description": "Test feed in RSS format.",
           "method": "GET",
           "path": "/api/rssFeeds/testFeed.xml",
-          "url": "https://trleahy.github.io/API-Endpoints/api/rssFeeds/testFeed.xml"
+          "url": "https://trleahy.github.io/apiEndpoints/api/rssFeeds/testFeed.xml"
         }
       ]
     },
@@ -42,7 +42,7 @@
           "description": "Returns a list of timezones.",
           "method": "GET",
           "path": "/api/timezones/timezones.json",
-          "url": "https://trleahy.github.io/API-Endpoints/api/timezones/timezones.json"
+          "url": "https://trleahy.github.io/apiEndpoints/api/timezones/timezones.json"
         }
       ]
     },
@@ -54,8 +54,8 @@
           "name": "Visor Channels",
           "description": "Returns a list of channels for Visor.",
           "method": "GET",
-          "path": "/api/visorChannels/visorChannels.json",
-          "url": "https://trleahy.github.io/API-Endpoints/api/visorChannels/visorChannels.json"
+          "path": "/api/visorChannels/channels.json",
+          "url": "https://trleahy.github.io/apiEndpoints/api/visorChannels/channels.json"
         }
       ]
     }
