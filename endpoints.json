@@ -51,28 +51,52 @@
       "name": "Whisper Money",
       "endpoints": [
         {
-          "name": "Amex Logo",
-          "description": "Brand logo asset for Amex used in Whisper Money.",
+          "name": "American Express",
+          "description": "",
           "method": "GET",
           "path": "/api/whisper-money/bankLogos/amex_logo.png",
           "url": "https://trleahy.github.io/apiEndpoints/api/whisper-money/bankLogos/amex_logo.png",
           "image": "https://trleahy.github.io/apiEndpoints/api/whisper-money/bankLogos/amex_logo.png"
         },
         {
-          "name": "Monzo Logo",
-          "description": "Brand logo asset for Monzo used in Whisper Money.",
+          "name": "Capital One",
+          "description": "",
+          "method": "GET",
+          "path": "/api/whisper-money/bankLogos/capitalOne_logo.png",
+          "url": "https://trleahy.github.io/apiEndpoints/api/whisper-money/bankLogos/capitalOne_logo.png",
+          "image": "https://trleahy.github.io/apiEndpoints/api/whisper-money/bankLogos/capitalOne_logo.png"
+        },
+        {
+          "name": "Monzo Bank",
+          "description": "",
           "method": "GET",
           "path": "/api/whisper-money/bankLogos/monzo_logo.png",
           "url": "https://trleahy.github.io/apiEndpoints/api/whisper-money/bankLogos/monzo_logo.png",
           "image": "https://trleahy.github.io/apiEndpoints/api/whisper-money/bankLogos/monzo_logo.png"
         },
         {
-          "name": "Starling Logo",
-          "description": "Brand logo asset for Starling used in Whisper Money.",
+          "name": "NatWest",
+          "description": "",
+          "method": "GET",
+          "path": "/api/whisper-money/bankLogos/natwest_logo.png",
+          "url": "https://trleahy.github.io/apiEndpoints/api/whisper-money/bankLogos/natwest_logo.png",
+          "image": "https://trleahy.github.io/apiEndpoints/api/whisper-money/bankLogos/natwest_logo.png"
+        },
+        {
+          "name": "Starling Bank",
+          "description": "",
           "method": "GET",
           "path": "/api/whisper-money/bankLogos/starling_logo.png",
           "url": "https://trleahy.github.io/apiEndpoints/api/whisper-money/bankLogos/starling_logo.png",
           "image": "https://trleahy.github.io/apiEndpoints/api/whisper-money/bankLogos/starling_logo.png"
+        },
+        {
+          "name": "Virgin Money",
+          "description": "",
+          "method": "GET",
+          "path": "/api/whisper-money/bankLogos/virginMoney_logo.png",
+          "url": "https://trleahy.github.io/apiEndpoints/api/whisper-money/bankLogos/virginMoney_logo.png",
+          "image": "https://trleahy.github.io/apiEndpoints/api/whisper-money/bankLogos/virginMoney_logo.png"
         }
       ]
     },
