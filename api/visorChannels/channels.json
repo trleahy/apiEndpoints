@@ -89,6 +89,12 @@
       "country": "SG",
       "url": "https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index.m3u8"
     },
+    "CNBC" : {
+      "name": "CNBC",
+      "description": "",
+      "country": "US",
+      "url": "https://amg01079-nbcuuk-amg01079c2-samsung-gb-1258.playouts.now.amagi.tv/playlist.m3u8"
+    }
     "RT" : {
       "name": "RT - Russia Today",
       "description": "Russia Today, a news channel linked to the Russian government",

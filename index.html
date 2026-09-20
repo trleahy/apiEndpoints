@@ -73,10 +73,17 @@ async function loadApiData() {
                             <div class="row">`;
 
             group.endpoints.forEach(endpoint => {
+                const imageMarkup = endpoint.image ? `
+                    <div class="text-center mb-3">
+                        <img src="${endpoint.image}" alt="${endpoint.name}" style="max-height:80px; max-width:100%; object-fit:contain;">
+                    </div>
+                ` : '';
+
                 groupHTML += `
                     <div class="col-md-4">
                         <div class="card shadow-sm">
                             <div class="card-body">
+                                ${imageMarkup}
                                 <h5 class="card-title">${endpoint.name}</h5>
                                 <p class="card-text">${endpoint.description}</p>
                                 <p><strong>Method:</strong> <span class="badge bg-info">${endpoint.method}</span></p>
@@ -127,15 +134,15 @@ async function loadApiData() {
 // Search functionality
 document.getElementById('searchBar').addEventListener('input', function() {
     const searchTerm = this.value.toLowerCase();
-    const allCards = document.querySelectorAll('.accordion-item');
-    allCards.forEach(card => {
-        const cardTitle = card.querySelector('.accordion-button').textContent.toLowerCase();
-        const cardDescription = card.querySelector('.card-text').textContent.toLowerCase();
-        if (cardTitle.includes(searchTerm) || cardDescription.includes(searchTerm)) {
-            card.style.display = '';
-        } else {
-            card.style.display = 'none';
-        }
+    const allGroups = document.querySelectorAll('.accordion-item');
+    allGroups.forEach(group => {
+        const groupTitle = group.querySelector('.accordion-button').textContent.toLowerCase();
+        const groupTexts = Array.from(group.querySelectorAll('.card-title, .card-text'))
+            .map(node => node.textContent.toLowerCase())
+            .join(' ');
+
+        const matches = groupTitle.includes(searchTerm) || groupTexts.includes(searchTerm);
+        group.style.display = matches || !searchTerm ? '' : 'none';
     });
 });
 

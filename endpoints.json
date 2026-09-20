@@ -47,6 +47,36 @@
       ]
     },
     {
+      "id": "whisperMoney",
+      "name": "Whisper Money",
+      "endpoints": [
+        {
+          "name": "Amex Logo",
+          "description": "Brand logo asset for Amex used in Whisper Money.",
+          "method": "GET",
+          "path": "/api/whisper-money/bankLogos/amex_logo.png",
+          "url": "https://trleahy.github.io/apiEndpoints/api/whisper-money/bankLogos/amex_logo.png",
+          "image": "https://trleahy.github.io/apiEndpoints/api/whisper-money/bankLogos/amex_logo.png"
+        },
+        {
+          "name": "Monzo Logo",
+          "description": "Brand logo asset for Monzo used in Whisper Money.",
+          "method": "GET",
+          "path": "/api/whisper-money/bankLogos/monzo_logo.png",
+          "url": "https://trleahy.github.io/apiEndpoints/api/whisper-money/bankLogos/monzo_logo.png",
+          "image": "https://trleahy.github.io/apiEndpoints/api/whisper-money/bankLogos/monzo_logo.png"
+        },
+        {
+          "name": "Starling Logo",
+          "description": "Brand logo asset for Starling used in Whisper Money.",
+          "method": "GET",
+          "path": "/api/whisper-money/bankLogos/starling_logo.png",
+          "url": "https://trleahy.github.io/apiEndpoints/api/whisper-money/bankLogos/starling_logo.png",
+          "image": "https://trleahy.github.io/apiEndpoints/api/whisper-money/bankLogos/starling_logo.png"
+        }
+      ]
+    },
+    {
       "id": "visorChannels",
       "name": "Visor Channels",
       "endpoints": [
