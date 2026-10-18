@@ -47,6 +47,33 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
+function renderEndpointCards(endpoints) {
+    const cards = endpoints.map(endpoint => {
+        const imageMarkup = endpoint.image ? `
+            <div class="text-center mb-3">
+                <img src="${endpoint.image}" alt="${endpoint.name}" style="max-height:80px; max-width:100%; object-fit:contain;">
+            </div>
+        ` : '';
+
+        return `
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        ${imageMarkup}
+                        <h5 class="card-title">${endpoint.name}</h5>
+                        <p class="card-text">${endpoint.description}</p>
+                        <p><strong>Method:</strong> <span class="badge bg-info">${endpoint.method}</span></p>
+                        <p><strong>Endpoint:</strong> <code>${endpoint.path}</code></p>
+                        <button class="btn btn-secondary btn-sm copy-btn" data-url="${endpoint.url}">Copy URL</button>
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
+
+    return `<div class="row">${cards}</div>`;
+}
+
 async function loadApiData() {
     try {
         const response = await fetch('endpoints.json');
@@ -55,10 +82,41 @@ async function loadApiData() {
 
         data.groups.forEach((group, i) => {
             const groupId = `group${i}`;
-            const endpointCount = group.endpoints.length;
+            const subgroups = group.subgroups || [];
+            const endpointCount = (group.endpoints || []).length + subgroups.reduce(
+                (count, subgroup) => count + subgroup.endpoints.length,
+                0
+            );
+            const endpointContent = subgroups.length ? `
+                <div class="accordion" id="${groupId}Subgroups">
+                    ${subgroups.map((subgroup, subgroupIndex) => {
+                        const subgroupId = `${groupId}Subgroup${subgroupIndex}`;
+                        const subgroupEndpointCount = subgroup.endpoints.length;
+
+                        return `
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="heading${subgroupId}">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse${subgroupId}"
+                                        aria-expanded="false" aria-controls="collapse${subgroupId}">
+                                        ${subgroup.name}
+                                        <span class="badge bg-secondary ms-3">${subgroupEndpointCount} Icon${subgroupEndpointCount !== 1 ? 's' : ''}</span>
+                                    </button>
+                                </h3>
+                                <div id="collapse${subgroupId}" class="accordion-collapse collapse"
+                                     aria-labelledby="heading${subgroupId}" data-bs-parent="#${groupId}Subgroups">
+                                    <div class="accordion-body">
+                                        ${renderEndpointCards(subgroup.endpoints)}
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            ` : renderEndpointCards(group.endpoints || []);
 
             let groupHTML = `
-                <div class="accordion-item">
+                <div class="accordion-item api-group">
                     <h2 class="accordion-header" id="heading${groupId}">
                         <button class="accordion-button collapsed" type="button" 
                             data-bs-toggle="collapse" data-bs-target="#collapse${groupId}" 
@@ -70,33 +128,7 @@ async function loadApiData() {
                     <div id="collapse${groupId}" class="accordion-collapse collapse" 
                          aria-labelledby="heading${groupId}" data-bs-parent="#apiAccordion">
                         <div class="accordion-body">
-                            <div class="row">`;
-
-            group.endpoints.forEach(endpoint => {
-                const imageMarkup = endpoint.image ? `
-                    <div class="text-center mb-3">
-                        <img src="${endpoint.image}" alt="${endpoint.name}" style="max-height:80px; max-width:100%; object-fit:contain;">
-                    </div>
-                ` : '';
-
-                groupHTML += `
-                    <div class="col-md-4">
-                        <div class="card shadow-sm">
-                            <div class="card-body">
-                                ${imageMarkup}
-                                <h5 class="card-title">${endpoint.name}</h5>
-                                <p class="card-text">${endpoint.description}</p>
-                                <p><strong>Method:</strong> <span class="badge bg-info">${endpoint.method}</span></p>
-                                <p><strong>Endpoint:</strong> <code>${endpoint.path}</code></p>
-                                <button class="btn btn-secondary btn-sm copy-btn" data-url="${endpoint.url}">Copy URL</button>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            });
-
-            groupHTML += `
-                            </div>
+                            ${endpointContent}
                         </div>
                     </div>
                 </div>
@@ -134,15 +166,8 @@ async function loadApiData() {
 // Search functionality
 document.getElementById('searchBar').addEventListener('input', function() {
     const searchTerm = this.value.toLowerCase();
-    const allCards = document.querySelectorAll('.accordion-item');
-    allCards.forEach(card => {
-        const cardTitle = card.querySelector('.accordion-button').textContent.toLowerCase();
-        const cardDescription = card.querySelector('.card-text').textContent.toLowerCase();
-        if (cardTitle.includes(searchTerm) || cardDescription.includes(searchTerm)) {
-            card.style.display = '';
-        } else {
-            card.style.display = 'none';
-        }
+    document.querySelectorAll('.api-group').forEach(group => {
+        group.style.display = group.textContent.toLowerCase().includes(searchTerm) ? '' : 'none';
     });
 });
 

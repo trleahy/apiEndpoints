@@ -3,14 +3,28 @@
     {
       "id": "appIcons",
       "name": "App Icons",
-      "endpoints": [
+      "subgroups": [
         {
+          "id": "odomo",
           "name": "Odomo",
-          "description": "App icon for Odomo.",
-          "method": "GET",
-          "path": "/api/appIcons/odomo-logo.svg",
-          "url": "https://trleahy.github.io/apiEndpoints/api/appIcons/odomo-logo.svg",
-          "image": "https://trleahy.github.io/apiEndpoints/api/appIcons/odomo-logo.svg"
+          "endpoints": [
+            {
+              "name": "Standard",
+              "description": "Standard app icon for Odomo.",
+              "method": "GET",
+              "path": "/api/appIcons/odomo/odomo-logo.svg",
+              "url": "https://trleahy.github.io/apiEndpoints/api/appIcons/odomo/odomo-logo.svg",
+              "image": "https://trleahy.github.io/apiEndpoints/api/appIcons/odomo/odomo-logo.svg"
+            },
+            {
+              "name": "Inverted",
+              "description": "Inverted app icon for Odomo.",
+              "method": "GET",
+              "path": "/api/appIcons/odomo/odomo-logo-inverted.svg",
+              "url": "https://trleahy.github.io/apiEndpoints/api/appIcons/odomo/odomo-logo-inverted.svg",
+              "image": "https://trleahy.github.io/apiEndpoints/api/appIcons/odomo/odomo-logo-inverted.svg"
+            }
+          ]
         }
       ]
     },
