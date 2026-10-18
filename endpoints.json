@@ -1,6 +1,20 @@
 {
   "groups": [
     {
+      "id": "appIcons",
+      "name": "App Icons",
+      "endpoints": [
+        {
+          "name": "Odomo",
+          "description": "App icon for Odomo.",
+          "method": "GET",
+          "path": "/api/appIcons/odomo-logo.svg",
+          "url": "https://trleahy.github.io/apiEndpoints/api/appIcons/odomo-logo.svg",
+          "image": "https://trleahy.github.io/apiEndpoints/api/appIcons/odomo-logo.svg"
+        }
+      ]
+    },
+    {
       "id": "assets",
       "name": "Assets",
       "endpoints": [

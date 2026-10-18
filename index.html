@@ -134,15 +134,15 @@ async function loadApiData() {
 // Search functionality
 document.getElementById('searchBar').addEventListener('input', function() {
     const searchTerm = this.value.toLowerCase();
-    const allGroups = document.querySelectorAll('.accordion-item');
-    allGroups.forEach(group => {
-        const groupTitle = group.querySelector('.accordion-button').textContent.toLowerCase();
-        const groupTexts = Array.from(group.querySelectorAll('.card-title, .card-text'))
-            .map(node => node.textContent.toLowerCase())
-            .join(' ');
-
-        const matches = groupTitle.includes(searchTerm) || groupTexts.includes(searchTerm);
-        group.style.display = matches || !searchTerm ? '' : 'none';
+    const allCards = document.querySelectorAll('.accordion-item');
+    allCards.forEach(card => {
+        const cardTitle = card.querySelector('.accordion-button').textContent.toLowerCase();
+        const cardDescription = card.querySelector('.card-text').textContent.toLowerCase();
+        if (cardTitle.includes(searchTerm) || cardDescription.includes(searchTerm)) {
+            card.style.display = '';
+        } else {
+            card.style.display = 'none';
+        }
     });
 });
 
