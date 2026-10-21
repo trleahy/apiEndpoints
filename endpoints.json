@@ -25,6 +25,20 @@
               "image": "https://trleahy.github.io/apiEndpoints/api/appIcons/odomo/odomo-logo-inverted.svg"
             }
           ]
+        },
+        {
+          "id": "tipple",
+          "name": "Tipple",
+          "endpoints": [
+            {
+              "name": "Standard",
+              "description": "Standard app icon for Tipple.",
+              "method": "GET",
+              "path": "/api/appIcons/tipple/tipple-logo.svg",
+              "url": "https://trleahy.github.io/apiEndpoints/api/appIcons/tipple/tipple-logo.svg",
+              "image": "https://trleahy.github.io/apiEndpoints/api/appIcons/tipple/tipple-logo.svg"
+            }
+          ]
         }
       ]
     },
